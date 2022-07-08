@@ -85,6 +85,6 @@ async def query(info:Info, status_code=status.HTTP_201_CREATED):
     return recommendations.to_dict()
 
 if __name__ == '__main__':
-    uvicorn.run(app, host='127.0.0.1', port=8080, debug=True)
+    uvicorn.run(app, host='0.0.0.0', port=8080, debug=True)
 
     # gunicorn main:app --workers 4 --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:80
